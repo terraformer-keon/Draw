@@ -1,0 +1,43 @@
+from tkinter import *
+from turtle import right, left, forward, down, circle, done
+
+
+def button_up():
+    forward(150)
+
+
+def button_down():
+    down()
+
+
+def button_right():
+    right(150)
+
+
+def button_left():
+    left(150)
+
+
+def button_circle():
+    circle(175)
+
+
+Woo = Tk()
+Woo.title("Keon's Art")
+
+
+button_up = Button(Woo, text="up", padx=41, pady=20, command=button_up)
+button_down = Button(Woo, text="down", padx=40, pady=20, command=button_down)
+button_right = Button(Woo, text="right", padx=41, pady=20, command=button_right)
+button_left = Button(Woo, text="left", padx=41, pady=20, command=button_left)
+button_circle = Button(Woo, text="circle", padx=41, pady=20, command=button_circle)
+
+
+button_up.grid(row=0, column=0)
+# button_down.grid(row=0, column=1) # down is 0 and does nothing
+button_right.grid(row=0, column=1)
+button_left.grid(row=0, column=2)
+button_circle.grid(row=0, column=3)
+
+done()
+Woo.mainloop()
